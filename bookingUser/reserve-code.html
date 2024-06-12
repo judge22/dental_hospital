@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUHS</title>
+
+    <!-- include cdn mdbootstrap4 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!-- link main css-->
+    <link rel="stylesheet" href="./../../style/css/main.css">
+</head>
+
+<body>
+    <main class="reserve-code">
+
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+
+                <!-- content page -->
+                <div class="content shadow-lg rounded col-xl-4 col-lg-5 col-md-7 col-sm-9 col-10" dir="rtl">
+
+                    <p class="fs-5 fw-bold">كود الحجز :</p>
+                    <!-- code -->
+                    <div class="code mb-3" id="reservation-code">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>1</span>
+                    </div>
+
+                    <p class="fs-5 fw-bold m-0">الحضور :</p>
+
+                    <p class="text-center mb-0">من الساعة <span>X</span> الي الساعة <span>Y</span></p>
+
+                    <div class="w-100 d-flex justify-content-center mt-2" id="Hide">
+                        <button class="btn-submit ps-5 pe-5 fw-bold print-button">طباعه <i class="fa-solid fa-print me-1"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+   <script>
+    const hideIt = document.querySelector('#Hide');   
+    const Print = document.querySelector('.print-button'); 
+    function HideButton() {
+        hideIt.style.display = 'none'; 
+    }
+    Print.addEventListener('click' , function(event){ 
+        window.print();
+       
+    })
+   </script>
+</body>
+
+</html>

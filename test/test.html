@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Input Data Example</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .print-container {
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin: 20px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .print-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .code {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .code input {
+            width: 30px;
+            text-align: center;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="print-container">
+        <p>:كود المريض</p>
+        <div class="code" id="codeInputs">
+            <input type="text" value="1" readonly />
+            <input type="text" value="9" readonly />
+            <input type="text" value="8" readonly />
+            <input type="text" value="7" readonly />
+            <input type="text" value="6" readonly />
+            <input type="text" value="5" readonly />
+            <input type="text" value="4" readonly />
+            <input type="text" value="3" readonly />
+            <input type="text" value="2" readonly />
+            <input type="text" value="1" readonly />
+        </div>
+        <button class="print-button" onclick="printInputData()">طباعه</button>
+    </div>
+
+    <script>
+        function printInputData() {
+            var inputs = document.querySelectorAll('#codeInputs input');
+            var printWindow = window.open('', '_blank', 'width=600,height=400');
+            printWindow.document.write('<html><head><title>Print</title>');
+            printWindow.document.write('<style>body{text-align:center;font-family:Arial,sans-serif;} .code { display: flex; justify-content: center; flex-wrap: wrap; } .code input { width: 30px; text-align: center; margin: 5px; border: 1px solid #ddd; border-radius: 3px; }</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write('<p>كود المريض:</p>');
+            printWindow.document.write('<div class="code">');
+            
+            inputs.forEach(function(input) {
+                printWindow.document.write('<input type="text" value="' + input.value + '" readonly />');
+            });
+
+            printWindow.document.write('</div>');
+            //printWindow.document.write('<p>الحضور:</p>');
+            //printWindow.document.write('<p>من الساعة X إلى الساعة Y</p>');
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+
+</body>
+</html>

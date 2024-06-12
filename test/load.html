@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Example</title>
+    <style>
+        #loader {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="loader">Loading...</div>
+    <div id="content"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loader = document.getElementById("loader");
+            const content = document.getElementById("content");
+
+            function fetchData() {
+                loader.style.display = "block"; // Show loader
+
+                fetch('https://api.example.com/data') // Replace with your backend endpoint
+                    .then(response => response.json())
+                    .then(data => {
+                        loader.style.display = "none"; // Hide loader
+                        content.innerHTML = JSON.stringify(data); // Display data
+                    })
+                    .catch(error => {
+                        loader.style.display = "block"; // Hide loader
+                        content.innerHTML = "Error loading data.";
+                        console.error('Error:', error);
+                    });
+            }
+
+            fetchData();
+        });
+    </script>
+</body>
+</html>

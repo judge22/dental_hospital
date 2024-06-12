@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUHS Admin</title>
+
+    <!-- include cdn mdbootstrap4 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
+
+    <!-- link cdn fontawesome -->
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+
+    <!-- link style dashboard -->
+    <link rel="stylesheet" href="../../../style/css/dashboard.css">
+
+    <!-- include cdn MDB script -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+
+    <!-- link script dashboard -->
+    <script src="../../../js/js/dashboard.js"></script>
+
+    <!-- link script main -->
+    <script src="../../../js/js/main.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Strat Sidebar -->
+        <aside id="sidebar" class="js-sidebar">
+
+            <!-- Content For Sidebar -->
+            <div class="content-sidebar shadow-lg">
+                <div class="sidebar-logo mb-5">
+                    <a href="#">Logo</a>
+                </div>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item">
+                        <a href="number-of-patients.html" class="sidebar-link">
+                            <i class="fa-solid fa-user pe-2"></i>
+                            Number Of Patients
+                        </a>
+                    </li>
+                    <li class="sidebar-item mt-2">
+                        <a href="create-account.html" class="sidebar-link">
+                            <i class="fa-solid fa-file pe-2"></i>
+                            Register
+                        </a>
+                    </li>
+                    <li class="sidebar-item border-bottom mt-3">
+                    </li>
+                    <li class="sidebar-item mt-2">
+                        <a href="#" class="sidebar-link hover-danger" id="logout-2">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- End Sidebar -->
+
+        <div class="main">
+
+            <!-- Strat Navbar -->
+            <nav class="navbar navbar-expand px-3 border-bottom d-md-none d-lg-none d-xl-none">
+                <div class="logo">
+                    logo
+                </div>
+
+                <div class="navbar-collapse navbar no-shadow">
+                    <div class="navbar-nav">
+                        <button class="btn no-shadow" id="sidebar-toggle" type="button">
+                            <i class="fa-solid fa-bars text-dark fs-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+
+            <!-- Start Content -->
+            <main class="content px-3 py-2">
+                <div class="container-fluid border-b-gray">
+                    <p class="mt-4 text-black fs-4 fw-bold">Create Account</p>
+
+                </div>
+                <div class="card mt-4 p-4 shadow mx-3">
+                    <form action="" id="registerForm">
+
+                        <!-- Enter role -->
+                        <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                            <select id="select-role" class="myInput form-control form-control-lg w-100" name="username">
+                                <option value="" selected disabled>Select Role</option>
+                                <option value="doctor">Doctor</option>
+                                <option value="professor">Professor</option>
+                                <option value="receptionist">Receptionist</option>
+                            </select>
+                            <label class="form-label bg-white" for="select-role">Role</label>
+                            <div class="form-notch w-100">
+                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                <div class="form-notch-middle" style="width: 0.8px;"></div>
+                                <div class="form-notch-trailing"></div>
+                            </div>
+                        </div>
+
+                        <!-- Card Inputs -->
+                        <div class="card-inputs doctor">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+
+                                    <!-- Enter Name -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <input type="text" id="name" class="myInput form-control form-control-lg w-100"
+                                            name="name" value="" placeholder="Enter a Name" />
+                                        <label class="form-label" for="name">Name</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 40.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+                                   <!-- ddddddddddd username-->
+                                   <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                    <input type="text" id="form3Example3"
+                                        class="myInput form-control form-control-lg w-100" name="user-name" value=""
+                                        placeholder="Enter a User Name" />
+                                    <label class="form-label" for="form3Example3">User Name</label>
+                                    <div class="form-notch w-100">
+                                        <div class="form-notch-leading" style="width: 9px;"></div>
+                                        <div class="form-notch-middle" style="width: 66.8px;"></div>
+                                        <div class="form-notch-trailing"></div>
+                                    </div>
+                                </div>
+                                   
+                                    <!-- Enter User email -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <input type="text" id="form3Example3"
+                                            class="myInput form-control form-control-lg w-100" name="email" value=""
+                                            placeholder="Enter Email" />
+                                        <label class="form-label" for="form3Example3">Email</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 66.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- input password -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <div class="d-flex position-relative">
+                                            <input type="password" id="password"
+                                                class="myInput form-control form-control-lg auth__password w-100"
+                                                name="" value="" placeholder="Enter a Patient Code" />
+                                            <label class="form-label" for="password">Password</label>
+                                            <span
+                                                class="password__icon text-primary fs-6 fw-bold fa-solid fa-eye-slash position-absolute top-0 end-0 cursor-pointer py-3 px-2"></span>
+                                            <div class="form-notch w-100">
+                                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                                <div class="form-notch-middle" style="width: 60.8px;"></div>
+                                                <div class="form-notch-trailing"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Enter phone -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <input type="text" id="form3Example3"
+                                            class="myInput form-control form-control-lg w-100" name="phone" value=""
+                                            placeholder="Enter a Phone" />
+                                        <label class="form-label" for="form3Example3">Phone</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 40.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+
+                                    <!-- Enter SSN -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <input type="text" id="ssn" class="myInput form-control form-control-lg w-100"
+                                            name="ssn" value="" placeholder="Enter a SSN" />
+                                        <label class="form-label" for="ssn">SSN</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 27px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Gender input -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <select type="text" id="gender"
+                                            class="myInput form-control form-control-lg w-100" name="" value=""
+                                            placeholder="Enter a Gender">
+                                            <option value="">Male</option>
+                                            <option value="">Female</option>
+                                        </select>
+                                        <label class="form-label bg-white" for="gender">Gender</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 41.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- clincs input -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <select type="text" id="form3Example3"
+                                            class="myInput form-control form-control-lg w-100" name="" value=""
+                                            placeholder="Enter a Clinics">
+                                            <option value="">Fixed prosthodontics</option>
+                                            <option value="">Removal prosthodontics</option>
+                                            <option value="">Restorative</option>
+                                            <option value="">Periodontics</option>
+                                            <option value="">Endodontics</option>
+                                            <option value="">Pedodontics</option>
+                                        </select>
+                                        <label class="form-label bg-white" for="form3Example3">Clinics</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 41.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Type input -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <select type="text" id="type" class="myInput form-control form-control-lg w-100"
+                                            name="" value="" placeholder="Enter a Gender">
+                                            <option value="">6 Month</option>
+                                            <option value="">12 Month</option>
+                                        </select>
+                                        <label class="form-label bg-white" for="type">Type</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 0.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <button type="submit" class="btn-submit mb-4 px-4 py-2">Enter</button>
+
+                        </div>
+                        <div class="card-inputs professor">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+
+                                    <!-- Enter Name -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <input type="text" id="name" class="myInput form-control form-control-lg w-100"
+                                            name="name" value="" placeholder="Enter a Name" />
+                                        <label class="form-label" for="name">Name</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 40.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Enter User Name -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <input type="text" id="form3Example3"
+                                            class="myInput form-control form-control-lg w-100" name="user-name" value=""
+                                            placeholder="Enter a User Name" />
+                                        <label class="form-label" for="form3Example3">User Name</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 66.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- input password -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <div class="d-flex position-relative">
+                                            <input type="password" id="password"
+                                                class="myInput form-control form-control-lg auth__password w-100"
+                                                name="" value="" placeholder="Enter a Patient Code" />
+                                            <label class="form-label" for="password">Password</label>
+                                            <span
+                                                class="password__icon text-primary fs-6 fw-bold fa-solid fa-eye-slash position-absolute top-0 end-0 cursor-pointer py-3 px-2"></span>
+                                            <div class="form-notch w-100">
+                                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                                <div class="form-notch-middle" style="width: 60.8px;"></div>
+                                                <div class="form-notch-trailing"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Enter phone -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <input type="text" id="form3Example3"
+                                            class="myInput form-control form-control-lg w-100" name="phone" value=""
+                                            placeholder="Enter a Phone" />
+                                        <label class="form-label" for="form3Example3">Phone</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 40.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+
+                                    <!-- Enter SSN -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <input type="text" id="ssn" class="myInput form-control form-control-lg w-100"
+                                            name="ssn" value="" placeholder="Enter a SSN" />
+                                        <label class="form-label" for="ssn">SSN</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 27px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Gender input -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <select type="text" id="gender"
+                                            class="myInput form-control form-control-lg w-100" name="" value=""
+                                            placeholder="Enter a Gender">
+                                            <option value="">Male</option>
+                                            <option value="">Female</option>
+                                        </select>
+                                        <label class="form-label bg-white" for="gender">Gender</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 41.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- clincs input -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <select type="text" id="form3Example3"
+                                            class="myInput form-control form-control-lg w-100" name="" value=""
+                                            placeholder="Enter a Clinics">
+                                            <option value="">Fixed prosthodontics</option>
+                                            <option value="">Removal prosthodontics</option>
+                                            <option value="">Restorative</option>
+                                            <option value="">Periodontics</option>
+                                            <option value="">Endodontics</option>
+                                            <option value="">Pedodontics</option>
+                                        </select>
+                                        <label class="form-label bg-white" for="form3Example3">Clinics</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 41.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <button type="submit" class="btn-submit mb-4 px-4 py-2">Enter</button>
+
+                        </div>
+                        <div class="card-inputs receptionist">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+
+                                    <!-- Enter Name -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <input type="text" id="name" class="myInput form-control form-control-lg w-100"
+                                            name="name" value="" placeholder="Enter a Name" />
+                                        <label class="form-label" for="name">Name</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 40.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Enter User Name -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <input type="text" id="form3Example3"
+                                            class="myInput form-control form-control-lg w-100" name="user-name" value=""
+                                            placeholder="Enter a User Name" />
+                                        <label class="form-label" for="form3Example3">User Name</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 66.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- input password -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <div class="d-flex position-relative">
+                                            <input type="password" id="password"
+                                                class="myInput form-control form-control-lg auth__password w-100"
+                                                name="" value="" placeholder="Enter a Patient Code" />
+                                            <label class="form-label" for="password">Password</label>
+                                            <span
+                                                class="password__icon text-primary fs-6 fw-bold fa-solid fa-eye-slash position-absolute top-0 end-0 cursor-pointer py-3 px-2"></span>
+                                            <div class="form-notch w-100">
+                                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                                <div class="form-notch-middle" style="width: 60.8px;"></div>
+                                                <div class="form-notch-trailing"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Enter phone -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <input type="text" id="form3Example3"
+                                            class="myInput form-control form-control-lg w-100" name="phone" value=""
+                                            placeholder="Enter a Phone" />
+                                        <label class="form-label" for="form3Example3">Phone</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 40.8px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+
+                                    <!-- Enter SSN -->
+                                    <div data-mdb-input-init class="form-outline mb-3 mt-4">
+                                        <input type="text" id="ssn" class="myInput form-control form-control-lg w-100"
+                                            name="ssn" value="" placeholder="Enter a SSN" />
+                                        <label class="form-label" for="ssn">SSN</label>
+                                        <div class="form-notch w-100">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 27px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-submit mb-4 px-4 py-2">Enter</button>
+
+                        </div> 
+
+                    </form>
+                </div>
+            </main>
+            <!-- End Content -->
+        </div>
+    </div>
+    <script src="../../../js/routing.js"></script>
+    <!-- <script src="../../../js/main.js"></script> -->
+     <script  src="admin.controller.js"></script>
+     <!-- <script src=""></script> -->
+</body>
+
+</html>
